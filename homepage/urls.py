@@ -33,3 +33,4 @@ urlpatterns += static('img/', document_root= settings.BASE_DIR / 'homepage/stati
 urlpatterns += static('js/', document_root= settings.BASE_DIR / 'homepage/static/js')
 urlpatterns += static('css/', document_root= settings.BASE_DIR / 'homepage/static/css')
 urlpatterns += static('fonts/', document_root= settings.BASE_DIR / 'homepage/static/fonts')
+urlpatterns += static('vendor/', document_root= settings.BASE_DIR / 'homepage/static/vendor')
