@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
 from django.views.generic.base import TemplateView
 
+from .forms import UserCreationForm
 from .models import Project
 
 
@@ -27,7 +28,13 @@ def login_view(request):
 
 
 def signup_view(request):
-    pass
+    if request.method == 'POST':
+        form = UserCreationForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+        return render(request, 'sign_up.html', context={'form': form})
+    return render(request, 'sign_up.html')
 
 
 def logout_view(request):
