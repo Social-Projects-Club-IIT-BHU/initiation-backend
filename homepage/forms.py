@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 
-from .models import User
+from .models import User, Project, Requests
 
 
 class UserCreationForm(forms.ModelForm):
@@ -24,3 +24,9 @@ class UserCreationForm(forms.ModelForm):
         user.set_password(self.cleaned_data['password2'])
         user.save()
         return user
+
+class ProjectCreateForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = ('name', 'category', 'description', 'group_link')
+

@@ -57,6 +57,9 @@ class Project(models.Model):
     description = models.CharField(max_length=500, blank=True)
     submittedby = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    project_requests = models.ManyToManyField(User, through = 'Requests', related_name = 'project_requests')
+    members = models.ManyToManyField(User, through= 'Member', related_name = 'project_members')
+    group_link = models.URLField(max_length = 200, null = True, blank = True)
 
 
 class Forum(models.Model):
@@ -70,8 +73,11 @@ class Member(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     forum = models.ForeignKey(Forum, on_delete=models.CASCADE)
     username = models.CharField(max_length=100)
-    projectname = models.CharField(max_length=100)
-
+    #projectname = models.CharField(max_length=100)
+    
+class Requests(models.Model):
+    request_project = models.ForeignKey(Project, on_delete = models.CASCADE)
+    person = models.ForeignKey(User, on_delete = models.CASCADE)
 
 class Chat(models.Model):
     forum = models.ForeignKey(Forum, on_delete=models.CASCADE)
