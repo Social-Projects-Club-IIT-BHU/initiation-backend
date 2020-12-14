@@ -51,36 +51,23 @@ class User(AbstractUser):
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 
 class Project(models.Model):
     name = models.CharField(max_length=100)
-    description = models.CharField(max_length=500, blank=True)
+    description = models.TextField()
     submittedby = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    project_requests = models.ManyToManyField(User, through = 'Requests', related_name = 'project_requests')
-    members = models.ManyToManyField(User, through= 'Member', related_name = 'project_members')
-    group_link = models.URLField(max_length = 200, null = True, blank = True)
+    members = models.ManyToManyField(
+        User,
+        related_name='project_members',
+    )
+    group_link = models.URLField(max_length=200, null=True, blank=True)
 
 
-class Forum(models.Model):
-    name = models.CharField(max_length=100)
-    description = models.CharField(max_length=500, blank=True)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
-
-
-class Member(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
-    forum = models.ForeignKey(Forum, on_delete=models.CASCADE)
-    username = models.CharField(max_length=100)
-    #projectname = models.CharField(max_length=100)
-    
 class Requests(models.Model):
-    request_project = models.ForeignKey(Project, on_delete = models.CASCADE)
-    person = models.ForeignKey(User, on_delete = models.CASCADE)
-
-class Chat(models.Model):
-    forum = models.ForeignKey(Forum, on_delete=models.CASCADE)
-    member = models.ForeignKey(Member, on_delete=models.CASCADE)
-    text = models.SlugField()
-    time = models.DateTimeField(auto_now_add=True)
+    request_project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    person = models.ForeignKey(User, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True)
