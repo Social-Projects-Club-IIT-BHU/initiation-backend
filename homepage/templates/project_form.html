@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block 'content' %}
+
+<!-- TODO: Create proper UI for form submission -->
+
+<section>
+    <div class="container">
+        <form class="form-row" action="" method="POST">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="name">Project Name</label>
+                <input class="form-control" id="name" type="text" name="name" {% if form.name.value %}
+                    value="{{form.name.value}}" {% endif %} placeholder="Enter Project Name">
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control" name="category" id="category">
+                    {% for choice in form.fields.category.choices %}
+                    <option value="{{choice.0}}" {% ifequal form.category.value choice.0 %} selected {% endifequal %}>
+                        {{choice.1}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" name="description" id="description" cols="30" rows="10"
+                    placeholder="Description">{% if form.description.value %}{{form.description.value}}{% endif %}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="group_link">Group Link</label>
+                <input class="form-control" type="url" name="group_link" id="group_link" {% if form.group_link.value %}
+                    value="{{form.group_link.value}}" {% endif %}>
+            </div>
+
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+
+
+{% endblock %}

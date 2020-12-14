@@ -4,8 +4,9 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.generic.base import TemplateView
 
-from .views import (NotFoundView, TestView, index_view, login_view,
-                    logout_view, profile_view, signup_view)
+from .views import (CreateProjectView, NotFoundView, TestView,
+                    UpdateProjectView, index_view, login_view, logout_view,
+                    profile_view, signup_view)
 
 urlpatterns = [
     path('', index_view, name="index"),
@@ -46,6 +47,10 @@ urlpatterns = [
     path('signup', signup_view, name="sign_up"),
     path('logout', logout_view, name='logout'),
     path('profile', profile_view, name='profile'),
+    path('new_project', CreateProjectView.as_view(), name='new_project'),
+    path('update_project/<pk>',
+         UpdateProjectView.as_view(),
+         name='update_project'),
 ]
 
 # for static files
