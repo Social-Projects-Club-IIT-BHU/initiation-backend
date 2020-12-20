@@ -1,0 +1,90 @@
+{% extends 'base/base.html' %}
+
+{% block 'content' %}
+
+<!-- Page Header Start -->
+<div class="page--header pt--60 pb--60 text-center" data-bg-img="img/page-header-img/bg.jpg" data-overlay="0.85">
+    <div class="container">
+        <div class="title">
+            <h2 class="h1 text-white">All Projects</h2>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Page Wrapper Start -->
+<section class="page--wrapper pt--80 pb--20">
+    <div class="container">
+        <div class="row">
+
+            <div class="main--content col-md-12 pb--60">
+                <div class="main--content-inner">
+
+                    <!-- Filter Nav Start -->
+                    <!-- <div class="filter--nav pb--30 clearfix">
+                        <div class="filter--link float--left">
+                            <h2 class="h4">All Groups : 25</h2>
+                        </div>
+
+                        <div class="filter--options float--right">
+                            <label>
+                                <span class="fs--14 ff--primary fw--500 text-darker">Show By :</span>
+
+                                <select name="membersfilter" class="form-control form-sm" data-trigger="selectmenu">
+                                    <option value="last-active" selected>Last Active</option>
+                                    <option value="most-members">Most Members</option>
+                                    <option value="newly-created">Newly Created</option>
+                                    <option value="alphabetical">Alphabetical</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div> -->
+                    <!-- Filter Nav End -->
+
+                    <div class="box--items">
+                        <div class="row gutter--15 AdjustRow">
+
+                            {% for project in projects %}
+                            <div class="col-md-3 col-xs-6 col-xxs-12">
+                                <div class="box--item text-center">
+                                    <a href="{% url 'detail_project' project.id %}" class="img" data-overlay="0.1">
+                                        <img src="img/group-img/01.jpg" alt="">
+                                    </a>
+
+                                    <div class="info">
+
+                                        <div class="title">
+                                            <h2 class="h6"><a
+                                                    href="{% url 'detail_project' project.id %}">{{project.name}}</a>
+                                            </h2>
+                                        </div>
+
+                                        <div class="meta">
+                                            <p>Category: {{project.category}}</p>
+                                            <p><i class="fa mr--8 fa-user-o"></i>{{project.members.count}} Members</p>
+                                        </div>
+
+                                        <div class="desc text-darker">
+                                            <p>{{project.description|truncatewords:20}}</p>
+                                        </div>
+
+                                        <div class="action">
+                                            <a href="{% url 'detail_project' project.id %}">Project Details<i
+                                                    class="fa ml--10 fa-caret-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

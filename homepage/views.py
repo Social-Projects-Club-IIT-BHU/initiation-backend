@@ -4,20 +4,16 @@ from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse, reverse_lazy
 from django.views import View
-<<<<<<< HEAD
-from django.views.generic import ListView, DetailView
-from django.urls import reverse_lazy, reverse
-=======
+from django.views.generic import DetailView, ListView
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
->>>>>>> 794f4efa03e271d9c5a161cbe01d991b9438e8da
 
 from .forms import ProjectCreateForm, UserCreationForm
 from .models import Project, Requests
 
 
 def index_view(request):
-    projects = Project.objects.all()
+    projects = Project.objects.order_by('-created')[:4]
     return render(request, "index.html", context={'projects': projects})
 
 
@@ -55,16 +51,16 @@ def logout_view(request):
 def profile_view(request):
     return render(request, 'profile.html')
 
-<<<<<<< HEAD
+
 def project_list_view(request):
     projects = Project.objects.all()
     ctx = {'projects': projects}
-    return render(request, 'groups.html', ctx)
+    return render(request, 'projects_list.html', ctx)
+
 
 class ProjectDetailView(DetailView):
     model = Project
-=======
->>>>>>> 794f4efa03e271d9c5a161cbe01d991b9438e8da
+
 
 class CreateProjectView(LoginRequiredMixin, View):
     template_name = 'project_form.html'

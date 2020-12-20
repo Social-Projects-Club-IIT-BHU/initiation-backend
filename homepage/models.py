@@ -63,8 +63,10 @@ class Project(models.Model):
     members = models.ManyToManyField(
         User,
         related_name='project_members',
+        blank=True,
     )
     group_link = models.URLField(max_length=200, null=True, blank=True)
+    created = models.DateTimeField(auto_now_add=True, null=True)
 
 
 class Requests(models.Model):
