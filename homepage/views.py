@@ -5,6 +5,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
+from django.views.generic import ListView, DetailView
 from django.urls import reverse_lazy, reverse
 
 from .forms import UserCreationForm, ProjectCreateForm
@@ -48,6 +49,14 @@ def logout_view(request):
 
 def profile_view(request):
     return render(request, 'profile.html')
+
+def project_list_view(request):
+    projects = Project.objects.all()
+    ctx = {'projects': projects}
+    return render(request, 'groups.html', ctx)
+
+class ProjectDetailView(DetailView):
+    model = Project
 
 class CreateProjectView(LoginRequiredMixin, View):
     template_name = '/project_form.html'
