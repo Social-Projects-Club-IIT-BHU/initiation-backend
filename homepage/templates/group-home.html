@@ -11,34 +11,13 @@ data-overlay-color="white">
     </div>
 
     <div class="cover--user-name">
-        <h2 class="h3 fw--600">Food Recipes</h2>
+        <h2 class="h3 fw--600">Project Name</h2>
     </div>
 
     <div class="cover--user-activity">
         <p><i class="fa mr--8 fa-clock-o"></i>Active 1 year 9 monts ago</p>
     </div>
 
-    <div class="cover--avatars">
-        <ul class="nav">
-            <li>
-                <a href="member-activity-personal.html" data-overlay="0.3" data-overlay-color="primary">
-                    <img src="img/group-img/admin-avatar-01.jpg" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="member-activity-personal.html" data-overlay="0.3" data-overlay-color="primary">
-                    <img src="img/group-img/admin-avatar-02.jpg" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="member-activity-personal.html" data-overlay="0.3" data-overlay-color="primary">
-                    <img src="img/group-img/admin-avatar-03.jpg" alt="">
-                </a>
-            </li>
-        </ul>
-
-        <p>Group Admins</p>
-    </div>
 
     <div class="cover--user-desc fw--400 fs--18 fstyle--i text-darkest">
         <p>Hello everyone ! There are many variations of passages of Lorem Ipsum available, but the majority
@@ -67,24 +46,11 @@ data-overlay-color="white">
                 <!-- Content Nav End -->
 
                 <!-- Filter Nav Start -->
-                <div class="filter--nav pb--60 clearfix">
-                    <div class="filter--options float--right">
-                        <label>
-                            <span class="fs--14 ff--primary fw--500 text-darker">Show By :</span>
-
-                            <select name="activityfilter" class="form-control form-sm"
-                                data-trigger="selectmenu">
-                                <option value="everything" selected>- Everything -</option>
-                                <option value="updates">updates</option>
-                                <option value="group-updates">Group Updates</option>
-                                <option value="group-memberships">Group Memberships</option>
-                                <option value="group-topics">Topics</option>
-                                <option value="group-replies">Replies</option>
-                                <option value="group-comments">Comments</option>
-                            </select>
-                        </label>
+                <!-- <div class=" "> -->
+                    <div class="box--controls float--right pb--60">
+                        <a href="{% url 'groups' %}" class="btn btn-primary fw--500 ">Join Group</a>
                     </div>
-                </div>
+                <!-- </div> -->
                 <!-- Filter Nav End -->
 
                 <!-- Activity List Start -->
@@ -140,130 +106,7 @@ data-overlay-color="white">
                             </div>
                             <!-- Activity Item End -->
                         </li>
-                        <li>
-                            <!-- Activity Item Start -->
-                            <div class="activity--item">
-                                <div class="activity--avatar">
-                                    <a href="member-activity-personal.html">
-                                        <img src="img/activity-img/avatar-03.jpg" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="activity--info fs--14">
-                                    <div class="activity--header">
-                                        <p><a href="member-activity-personal.html">Denise R. Sherman</a>
-                                            shared her new experience about recipes in the group <a
-                                                href="{% url 'group-home' %}">Food Recipes</a></p>
-                                    </div>
-
-                                    <div class="activity--meta fs--12">
-                                        <p><i class="fa mr--8 fa-clock-o"></i>2 months ago</p>
-                                    </div>
-
-                                    <div class="activity--content">
-                                        <p>Here's what one recipe reviewer had to say: "I made this recipe
-                                            for the first time for my Italian mom, and she loved it! It was
-                                            full of flavor. I would definitely make this again. I know it
-                                            was good because my mom asked me for the recipe."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Activity Item End -->
-                        </li>
-                        <li>
-                            <!-- Activity Item Start -->
-                            <div class="activity--item">
-                                <div class="activity--avatar">
-                                    <a href="member-activity-personal.html">
-                                        <img src="img/activity-img/avatar-04.jpg" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="activity--info fs--14">
-                                    <div class="activity--header">
-                                        <p><a href="member-activity-personal.html">Leticia J. Espinosa</a>
-                                            posted an update in the group <a href="{% url 'group-home' %}">Food
-                                                Recipes</a></p>
-                                    </div>
-
-                                    <div class="activity--meta fs--12">
-                                        <p><i class="fa mr--8 fa-clock-o"></i>2 months ago</p>
-                                    </div>
-
-                                    <div class="activity--content">
-                                        <p>This is one of Ina's all-time favorite recipes. It looks fancy,
-                                            but it really is easy. Use crisp, tart apples like Granny Smith
-                                            for the best flavor.</p>
-                                    </div>
-
-                                    <div class="activity--comments fs--12">
-                                        <ul class="acomment--items nav">
-                                            <li>
-                                                <div class="acomment--item clearfix">
-                                                    <div class="acomment--avatar">
-                                                        <a href="member-activity-personal.html">
-                                                            <img src="img/activity-img/avatar-05.jpg"
-                                                                alt="">
-                                                        </a>
-                                                    </div>
-
-                                                    <div class="acomment--info">
-                                                        <div class="acomment--header">
-                                                            <p><a href="member-activity-personal.html">Lee
-                                                                    E. Jones</a> Replied</p>
-                                                        </div>
-
-                                                        <div class="acomment--meta">
-                                                            <p><i class="fa mr--8 fa-clock-o"></i>2 months
-                                                                ago</p>
-                                                        </div>
-
-                                                        <div class="acomment--content">
-                                                            <p>Yes I’m agree with you. I was also made it.
-                                                                it’’s really very easy and tasty recipe.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Activity Item End -->
-                        </li>
-                        <li>
-                            <!-- Activity Item Start -->
-                            <div class="activity--item">
-                                <div class="activity--avatar">
-                                    <a href="member-activity-personal.html">
-                                        <img src="img/activity-img/avatar-06.jpg" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="activity--info fs--14">
-                                    <div class="activity--header">
-                                        <p><a href="member-activity-personal.html">Bonnie P. Rock</a> shared
-                                            a link in the group <a href="{% url 'group-home' %}">Food Recipes</a>
-                                        </p>
-                                    </div>
-
-                                    <div class="activity--meta fs--12">
-                                        <p><i class="fa mr--8 fa-clock-o"></i>2 months ago</p>
-                                    </div>
-
-                                    <div class="activity--content">
-                                        <p>With more than 4,300 reviews and a five-star rating, Alton's
-                                            classic turkey is the go-to foolproof recipe every cook can use.
-                                        </p>
-
-                                        <p><a href="#"
-                                                class="btn-link">https://www.google.com/demofoodcorner</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Activity Item End -->
-                        </li>
+                                                        
                         <li>
                             <!-- Activity Item Start -->
                             <div class="activity--item">
@@ -341,110 +184,24 @@ data-overlay-color="white">
 
         <!-- Main Sidebar Start -->
         <div class="main--sidebar col-md-4 pb--60" data-trigger="stickyScroll">
-            <!-- Widget Start -->
-            <!-- <div class="widget"> -->
-            <!-- <h2 class="h4 fw--700 widget--title">Find A Buddy</h2> -->
-
-            <!-- Buddy Finder Widget Start -->
-            <!-- <div class="buddy-finder--widget">
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-xs-6 col-xxs-12">
-                                <div class="form-group">
-                                    <label>
-                                        <span class="text-darker ff--primary fw--500">I Am</span>
-
-                                        <select name="gender" class="form-control form-sm" data-trigger="selectmenu">
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-6 col-xxs-12">
-                                <div class="form-group">
-                                    <label>
-                                        <span class="text-darker ff--primary fw--500">Looking For</span>
-
-                                        <select name="lookingfor" class="form-control form-sm" data-trigger="selectmenu">
-                                            <option value="female">Female</option>
-                                            <option value="male">Male</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-6 col-xxs-12">
-                                <div class="form-group">
-                                    <label>
-                                        <span class="text-darker ff--primary fw--500">Age</span>
-
-                                        <select name="age" class="form-control form-sm" data-trigger="selectmenu">
-                                            <option value="18to25">18 to 25</option>
-                                            <option value="25to30">25 to 30</option>
-                                            <option value="30to35">30 to 35</option>
-                                            <option value="35to40">35 to 40</option>
-                                            <option value="40plus">40+</option>
-                                        </select>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-6 col-xxs-12">
-                                <div class="form-group">
-                                    <label>
-                                        <span class="text-darker ff--primary fw--500">City</span>
-
-                                        <select name="city" class="form-control form-sm" data-trigger="selectmenu">
-                                            <option value="newyork">New York</option>
-                                            <option value="California">California</option>
-                                            <option value="Atlanta">Atlanta</option>
-                                        </select>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label>
-                                        <span class="text-darker ff--primary fw--500">Filter Country</span>
-
-                                        <select name="city" class="form-control form-sm" data-trigger="selectmenu">
-                                            <option value="unitedstates">United States</option>
-                                            <option value="australia">Australia</option>
-                                            <option value="turkey">Turkey</option>
-                                            <option value="vietnam">Vietnam</option>
-                                        </select>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="col-xs-12">
-                                <button type="submit" class="btn btn-primary">Search</button>
-                            </div>
-                        </div>
-                    </form>
-                </div> -->
-            <!-- Buddy Finder Widget End -->
-            <!-- </div> -->
-            <!-- Widget End -->
+            
 
             <!-- Widget Start -->
-            <!-- <div class="widget"> -->
-            <!-- <h2 class="h4 fw--700 widget--title">Notice</h2> -->
+            <div class="widget">
+                <h2 class="h4 fw--700 widget--title">Project Leader </h2>
+                <div class="activity--avatar">
+                    <a href="member-activity-personal.html">
+                        <img src="img/activity-img/avatar-01.jpg" alt="">
+                    </a>
+                </div>
+                <div class="activity--info fs--14">
+                    <div class="activity--header">
+                        <p><a href="member-activity-personal.html">Yash Garg</a> started the project <a href="{% url 'group-home' %}">Food Recipes</a></p>
+                    </div>
 
-            <!-- Text Widget Start -->
-            <!-- <div class="text--widget"> -->
-            <!-- <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some  look even slightly believable.</p> -->
-            <!-- </div> -->
-            <!-- Text Widget End -->
-            <!-- </div> -->
-            <!-- Widget End -->
-
-            <!-- Widget Start -->
+                </div>
+               
+            </div>
             <div class="widget">
                 <h2 class="h4 fw--700 widget--title">Find other groups </h2>
 
@@ -541,10 +298,13 @@ data-overlay-color="white">
                 </div>
 
                 <!-- Ad Widget Start -->
-                <div style="float: right;">
+                <!-- <div style="float: right;">
                     <button>
                         <a href="{% url 'group-members' %}">All members</a>
                     </button>
+                </div> -->
+                <div class="box--controls text-center">
+                    <a href="{% url 'group-members' %}" class="btn ff--primary fw--500 btn-default">All Members</a>
                 </div>
                 <!-- Ad Widget End -->
             </div>
