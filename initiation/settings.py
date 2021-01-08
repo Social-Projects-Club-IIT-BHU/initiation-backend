@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get(
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = False
+DEBUG = True
 # SECURE_SSL_REDIRECT = True
 ALLOWED_HOSTS = ['*']
 
