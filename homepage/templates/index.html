@@ -1,17 +1,675 @@
-<!DOCTYPE html>
-<html>
-    <head>
+{% extends 'base/base.html' %}
 
-    </head>
-    <body>
-    <h1>Hello</h1>
+{% block 'content' %}
 
-    <div>
-        {% for project in projects %}
-        <h2>
-            {{project.name}}
-        </h2>
-        {% endfor %}
+<!-- Banner Section Start -->
+<section class="banner--section">
+    <!-- Banner Slider Start -->
+    <div class="banner--slider owl-carousel" data-owl-dots="true" data-owl-dots-style="2">
+        <!-- Banner Item Start -->
+        <div class="banner--item" data-bg-img="https://www.thesoftwarereport.com/wp-content/uploads/2020/06/Software-Innovation.jpeg" data-overlay="0.75">
+            <div class="vc--parent">
+                <div class="vc--child">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <!-- Banner Content Start -->
+                                <div class="banner--content pt--70 pb--80 text-center">
+                                    <div class="title">
+                                        <h1 class="h1 text-lightgray">Welcome To Community</h1>
+                                    </div>
+
+                                    <div class="sub-title">
+                                        <h2 class="h2 text-lightgray">Collaborate, Ideate &amp; Initiate</h2>
+                                    </div>
+
+                                    <div class="desc text-gray fs--16">
+                                        <p>Initiation is a Social Network platform created by SPC to provide an online
+                                            platform to create a database for collection of diverse social problems and
+                                            reaching the solutions by collaborative efforts of like-minded people.</p>
+                                    </div>
+
+                                    <div class="action text-uppercase">
+                                        <!-- <a href="#" class="btn btn-white">Learn More</a> -->
+                                        <a href="#" class="btn btn-primary">Collaborate Now</a>
+                                    </div>
+                                </div>
+                                <!-- Banner Content End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Item End -->
+
+        <!-- Banner Item Start -->
+        <div class="banner--item"
+
+            data-bg-img="https://www.berwickpartners.co.uk/fileadmin/_processed_/d/3/csm_Collaboration_c61486eeab.jpg"
+            data-overlay="0.75">
+            <div class="vc--parent">
+                <div class="vc--child">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <!-- Banner Content Start -->
+                                <div class="banner--content pt--70 pb--80 text-center">
+                                    <div class="title">
+                                        <h1 class="h1 text-lightgray">Welcome To Community</h1>
+                                    </div>
+
+                                    <div class="sub-title">
+                                        <h2 class="h2 text-lightgray">Collaborate, Ideate &amp; Initiate</h2>
+                                    </div>
+
+                                    <div class="desc text-gray fs--16">
+                                        <p>Initiation is a Social Network platform created by SPC to provide an online
+                                            platform to create a database for collection of diverse social problems and
+                                            reaching the solutions by collaborative efforts of like-minded people.</p>
+                                    </div>
+
+                                    <div class="action text-uppercase">
+                                        <!-- <a href="#" class="btn btn-white">Learn More</a> -->
+                                        <a href="#" class="btn btn-primary">Collaborate Now</a>
+                                    </div>
+                                </div>
+                                <!-- Banner Content End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Item End -->
+
+        <!-- Banner Item Start -->
+        <div class="banner--item"
+            data-bg-img="https://images.squarespace-cdn.com/content/v1/565dec2de4b0475ab00625b6/1450219952208-SO897KKWIL7GV67OQCS0/ke17ZwdGBToddI8pDm48kLFuCKOlF2rBjvqAZpGUISp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1URYgJc25we2tIsQk5q66_BWgOYhm2YGzc6VXVvb9AkO_xrxjPk_CVDSDL5ouV0jMuQ/O28+-+Fotolia_31846834_L.jpg"
+            data-overlay="0.75">
+            <div class="vc--parent">
+                <div class="vc--child">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <!-- Banner Content Start -->
+                                <div class="banner--content pt--70 pb--80 text-center">
+                                    <div class="title">
+                                        <h1 class="h1 text-lightgray">Welcome To Community</h1>
+                                    </div>
+
+                                    <div class="sub-title">
+                                        <h2 class="h2 text-lightgray">Collaborate, Ideate &amp; Initiate</h2>
+                                    </div>
+
+                                    <div class="desc text-gray fs--16">
+                                        <p>Initiation is a Social Network platform created by SPC to provide an online
+                                            platform to create a database for collection of diverse social problems and
+                                            reaching the solutions by collaborative efforts of like-minded people.</p>
+                                    </div>
+
+                                    <div class="action text-uppercase">
+                                        <!-- <a href="#" class="btn btn-white">Learn More</a> -->
+                                        <a href="#" class="btn btn-primary">Collaborate Now</a>
+                                    </div>
+                                </div>
+                                <!-- Banner Content End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner Item End -->
     </div>
-    </body>
-</html>
+    <!-- Banner Slider End -->
+</section>
+<!-- Banner Section End -->
+
+<!-- Features Section Start -->
+<section class="section bg-lighter pt--80 pb--40">
+    <div class="container">
+        <div class="row AdjustRow">
+            <div class="col-md-3 col-xs-6 col-xxs-12 pb--40">
+                <!-- Feature Item Start -->
+                <div class="feature--item bg-default text-center">
+                    <div class="title">
+                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">530</span>k+</h2>
+                    </div>
+
+                    <div class="sub-title">
+                        <h3 class="h2 fs--16">Stories / Topics Created</h3>
+                    </div>
+
+                    <div class="desc">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <!-- Feature Item End -->
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-xxs-12 pb--40">
+                <!-- Feature Item Start -->
+                <div class="feature--item bg-default text-center">
+                    <div class="title">
+                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">30</span>k+</h2>
+                    </div>
+
+                    <div class="sub-title">
+                        <h3 class="h2 fs--16">Member Online Right Now</h3>
+                    </div>
+
+                    <div class="desc">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <!-- Feature Item End -->
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-xxs-12 pb--40">
+                <!-- Feature Item Start -->
+                <div class="feature--item bg-default text-center">
+                    <div class="title">
+                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">1.5</span>k+</h2>
+                    </div>
+
+                    <div class="sub-title">
+                        <h3 class="h2 fs--16">Active Group / Meeting Room</h3>
+                    </div>
+
+                    <div class="desc">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <!-- Feature Item End -->
+            </div>
+
+            <div class="col-md-3 col-xs-6 col-xxs-12 pb--40">
+                <!-- Feature Item Start -->
+                <div class="feature--item bg-default text-center">
+                    <div class="title">
+                        <h2 class="h1 ff--default text-primary"><span data-trigger="counterup">03</span>k+</h2>
+                    </div>
+
+                    <div class="sub-title">
+                        <h3 class="h2 fs--16">New Event In Every Week</h3>
+                    </div>
+
+                    <div class="desc">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <!-- Feature Item End -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Features Section End -->
+
+<!-- How It Works Section Start -->
+<section class="section pt--70 pb--40">
+    <div class="container">
+        <!-- Section Title Start -->
+        <div class="section--title pb--50 text-center">
+            <div class="title">
+                <h2 class="h2">How Initiation Works?</h2>
+            </div>
+
+            <!-- <div class="sub-title">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has industry's.</p>
+            </div> -->
+        </div>
+        <!-- Section Title End -->
+
+        <div class="row">
+            <div class="col-md-7 pb--60 pt--40 ">
+                <!-- Video Popup Start -->
+                <div class="video--popup style--1" data-overlay="0.3">
+                    <img src="img/why-choose-us-img/video-poster-1.jpg" alt="">
+
+                    <a href="https://www.youtube.com/watch?v=YE7VzlLtp-4" class="btn-link" data-trigger="video_popup">
+                        <span><i class="fa fa-play"></i></span>
+                    </a>
+                </div>
+                <!-- Video Popup End -->
+            </div>
+            <!-- <div class="col-md-7 pb--40">
+                <div class="row gutter--15 AdjustRow" data-scroll-reveal="group">
+                    <div class="col-xs-4 pb--15">
+                        <img src="img/how-it-works-img/01.jpg" alt="">
+                    </div>
+
+                    <div class="col-xs-4 pb--15">
+                        <img src="img/how-it-works-img/02.jpg" alt="">
+                    </div>
+
+                    <div class="col-xs-4 pb--15">
+                        <img src="img/how-it-works-img/03.jpg" alt="">
+                    </div>
+
+                    <div class="col-xs-12">
+                        <img src="img/how-it-works-img/04.jpg" alt="">
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="col-md-5 pb--40">
+                <!-- Info Items Start -->
+                <div class="info--items" data-scroll-reveal="group">
+                    <!-- Info Item Start -->
+                    <div class="info--item clearfix">
+                        <div class="icon">
+                            <img src="img/how-it-works-img/icon-01.png" alt="">
+                        </div>
+
+                        <div class="info">
+                            <div class="title">
+                                <h3 class="h4 fw--700">Create An Account</h3>
+                            </div>
+
+                            <div class="desc">
+                                <p>Head to the Registration button to create an Account.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Info Item End -->
+
+                    <!-- Info Item Start -->
+                    <div class="info--item clearfix">
+                        <div class="icon">
+                            <img src="img/how-it-works-img/icon-02.png" alt="">
+                        </div>
+
+                        <div class="info">
+                            <div class="title">
+                                <h3 class="h4 fw--700">Join a Group</h3>
+                            </div>
+
+                            <div class="desc">
+                                <p>Join a group among the various groups we have.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Info Item End -->
+
+                    <!-- Info Item Start -->
+                    <div class="info--item clearfix">
+                        <div class="icon">
+                            <img src="img/how-it-works-img/icon-03.png" alt="">
+                        </div>
+
+                        <div class="info">
+                            <div class="title">
+                                <h3 class="h4 fw--700">Start Discussion</h3>
+                            </div>
+
+                            <div class="desc">
+                                <p>Discuss with like minded people about a solution to the problem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Info Item End -->
+
+                    <!-- Info Item Start -->
+                    <div class="info--item clearfix">
+                        <div class="icon">
+                            <img src="img/how-it-works-img/icon-04.png" alt="">
+                        </div>
+
+                        <div class="info">
+                            <div class="title">
+                                <h3 class="h4 fw--700">Collaborate With Friends</h3>
+                            </div>
+
+                            <div class="desc">
+                                <p>Encourage your friends to join Initiation and create a difference together</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Info Item End -->
+                </div>
+                <!-- Info Items End -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- How It Works Section End -->
+<!-- Most Popular Groups Section Start -->
+<section class="section bg-lighter pt--70 pb--70">
+    <div class="container">
+        <!-- Box Nav Start -->
+        <div class="box--nav clearfix">
+            <h2 class="h2 fw--600 float--left">Recent Projects</h2>
+        </div>
+        <!-- Box Nav End -->
+
+        <div class="row-fluid" id="projects">
+            <!-- Box Items Start -->
+            <div class="owl-carousel" data-owl-items="4" data-owl-margin="30" data-owl-autoplay="false"
+                data-owl-responsive='{"0": {"items": "1"}, "481": {"items": "2"}, "768": {"items": "3"}, "992": {"items": "4"}}'>
+
+                {% for project in projects %}
+                <div class="box--item text-center">
+                    <a href="{% url 'detail_project' project.id %}" class="img" data-overlay="0.1">
+                        <img src="img/group-img/01.jpg" alt="">
+                    </a>
+
+                    <div class="info">
+                        <div class="title">
+                            <h2 class="h6"><a href="{% url 'detail_project' project.id %}"> {{project.name}} </a></h2>
+                        </div>
+
+                        <div class="meta">
+                            <p>Category: {{project.category}}</p>
+                            <p><i class="fa mr--8 fa-user-o"></i>{{project.members.count}} Members</p>
+                        </div>
+
+                        <div class="desc text-darker">
+                            <p>{{project.description|truncatewords:20}}</p>
+                        </div>
+
+                        <div class="action">
+                            <a href="{% url 'detail_project' project.id %}">Project Details<i
+                                    class="fa ml--10 fa-caret-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <!-- Box Items End -->
+
+            <!-- Box Controls Start -->
+            <div class="box--controls text-center">
+                <a href="#" class="btn fs--16 btn-default" data-action="prev">
+                    <i class="fa fa-caret-left"></i>
+                </a>
+
+                <a href="{% url 'list_project' %}" class="btn ff--primary fw--500 btn-default">View All Projects</a>
+
+                <a href="#" class="btn fs--16 btn-default" data-action="next">
+                    <i class="fa fa-caret-right"></i>
+                </a>
+            </div>
+            <!-- Box Controls End -->
+        </div>
+
+    </div>
+</section>
+<!-- Why Choose Us Section Start -->
+<section class="section bg-lighter pt--80 pb--20">
+    <div class="container">
+        <div class="row row--md-vc">
+            <div class="col-md-6 pb--50">
+                <!-- Text Block Start -->
+                <div class="text--block pb--10">
+                    <div class="title">
+                        <h2 class="h2 fw--600">Why Choose Us?</h2>
+                    </div>
+
+                    <div class="content fs--14">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. make a type
+                            specimen book.</p>
+                    </div>
+                </div>
+                <!-- Text Block End -->
+
+                <div class="row AdjustRow">
+                    <div class="col-xs-6 col-xxs-12 pb--10">
+                        <!-- Feature Block Start -->
+                        <div class="feature--block mb--6 clearfix">
+                            <div class="icon fs--18 text-primary mr--20 float--left">
+                                <i class="fa fa-comments-o"></i>
+                            </div>
+
+                            <div class="info ov--h">
+                                <div class="title">
+                                    <h2 class="h6 fw--700">Individual Live Chat</h2>
+                                </div>
+
+                                <div class="desc mt--8">
+                                    <p>Ipsum is simply dummy text of the printing industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Feature Block End -->
+                    </div>
+
+                    <div class="col-xs-6 col-xxs-12 pb--10">
+                        <!-- Feature Block Start -->
+                        <div class="feature--block mb--6 clearfix">
+                            <div class="icon fs--18 text-primary mr--20 float--left">
+                                <i class="fa fa-wrench"></i>
+                            </div>
+
+                            <div class="info ov--h">
+                                <div class="title">
+                                    <h2 class="h6 fw--700">User Friendly Settings</h2>
+                                </div>
+
+                                <div class="desc mt--8">
+                                    <p>Ipsum is simply dummy text of the printing industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Feature Block End -->
+                    </div>
+
+                    <div class="col-xs-6 col-xxs-12 pb--10">
+                        <!-- Feature Block Start -->
+                        <div class="feature--block mb--6 clearfix">
+                            <div class="icon fs--18 text-primary mr--20 float--left">
+                                <i class="fa fa-group"></i>
+                            </div>
+
+                            <div class="info ov--h">
+                                <div class="title">
+                                    <h2 class="h6 fw--700">Discover Amazing People</h2>
+                                </div>
+
+                                <div class="desc mt--8">
+                                    <p>Ipsum is simply dummy text of the printing industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Feature Block End -->
+                    </div>
+
+                    <div class="col-xs-6 col-xxs-12 pb--10">
+                        <!-- Feature Block Start -->
+                        <div class="feature--block mb--6 clearfix">
+                            <div class="icon fs--18 text-primary mr--20 float--left">
+                                <i class="fa fa-clock-o"></i>
+                            </div>
+
+                            <div class="info ov--h">
+                                <div class="title">
+                                    <h2 class="h6 fw--700">Times Fly With Us</h2>
+                                </div>
+
+                                <div class="desc mt--8">
+                                    <p>Ipsum is simply dummy text of the printing industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Feature Block End -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 pb--60">
+                <!-- Video Popup Start -->
+                <div class="video--popup style--1" data-overlay="0.3">
+                    <img src="https://impacttourism.ca/wp-content/uploads/2019/06/kisspng-collaboration-teamwork-organization-management.jpg" alt="">
+
+                    <!-- <a href="https://www.youtube.com/watch?v=YE7VzlLtp-4" class="btn-link" data-trigger="video_popup">-->
+                        <!-- <span><i class="fa fa-play"></i></span> -->
+                    <!-- </a> -->
+                </div>
+                <!-- Video Popup End -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why Choose Us Section End -->
+<!-- FAQ and Download Section Start -->
+<section class="section pt--70 pb--20">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pb--60">
+                <!-- FAQ Items Start -->
+                <div class="faq--items" id="faqItems" data-scroll-reveal="group">
+                    <div class="title pb--20">
+                        <h2 class="h2 fw--600">Frequently Asked Question</h2>
+                    </div>
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq--item style--1 panel">
+                        <div class="title">
+                            <h3 class="h6 fw--700 text-darker">
+                                <a href="#faqItem01" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
+                                    <span> What is the main motive of Initiation?</span>
+                                </a>
+                            </h3>
+                        </div>
+
+                        <div id="faqItem01" class="content collapse">
+                            <div class="content--inner">
+                                <p>The main motive of Initiation is to create a problem repository with proper ground
+                                    details and also to bring together all the dedicated social workers to tackle the
+                                    social problems with their new and innovative ideas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq--item style--1 panel">
+                        <div class="title">
+                            <h3 class="h6 fw--700 text-darker">
+                                <a href="#faqItem02" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
+                                    <span> How does Initiation work?</span>
+                                </a>
+                            </h3>
+                        </div>
+
+                        <div id="faqItem02" class="content collapse">
+                            <div class="content--inner">
+                                <p>Initiation is an Online platform designed to create a problem repository. The problem
+                                    submission form you can submit a social problem.The problems will be broadcasted
+                                    through the main channel of Initiation.To work on a problem you can pitch and
+                                    discuss the solutions with other members in the Discussion group link given.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq--item style--1 panel">
+                        <div class="title">
+                            <h3 class="h6 fw--700 text-darker">
+                                <a href="#faqItem03" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
+                                    <span>How to use the Initiation Channel?</span>
+                                </a>
+                            </h3>
+                        </div>
+
+                        <div id="faqItem03" class="content collapse">
+                            <div class="content--inner">
+                                <p>The channel is the main interface of our platform. The submitted problems after
+                                    checking will be broadcasted through the channel, so that you can view them and
+                                    choose to work on the issue you like. Also, you will get the Discussion group
+                                    invitation link with the problem in the Channel.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+                </div>
+                <!-- FAQ Items End -->
+            </div>
+
+            <div class="col-md-6 pb--60">
+                <!-- Download Block Start -->
+                <!-- <div class="col-md-5 pb--60"> -->
+                <!-- FAQ Items Start -->
+                <div class="faq--items" id="faqItems" data-scroll-reveal="group">
+                    <div class="title pb--20">
+                        <h2 class="h2 fw--600" style="visibility: hidden;">Frequently Asked Question</h2>
+                    </div>
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq--item style--1 panel">
+                        <div class="title">
+                            <h3 class="h6 fw--700 text-darker">
+                                <a href="#faqItem04" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
+                                    <span>How to submit a problem?</span>
+                                </a>
+                            </h3>
+                        </div>
+
+                        <div id="faqItem04" class="content collapse">
+                            <div class="content--inner">
+                                <p>The targeted problem or issue will be submitted in the Google form designed
+                                    particularly for the problem submission. You need to provide the proper details of
+                                    the problem in the form, the description for the same is also written in the form.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq--item style--1 panel">
+                        <div class="title">
+                            <h3 class="h6 fw--700 text-darker">
+                                <a href="#faqItem05" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
+                                    <span>How to search for a problem among submitted problems?</span>
+                                </a>
+                            </h3>
+                        </div>
+
+                        <div id="faqItem05" class="content collapse">
+                            <div class="content--inner">
+                                <p>All the problems can be accessed from the Google spreadsheet. You can also search
+                                    through the problems in the Telegram Channel itself using the search option present
+                                    in the top right corner of the channel.
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq--item style--1 panel">
+                        <div class="title">
+                            <h3 class="h6 fw--700 text-darker">
+                                <a href="#faqItem06" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
+                                    <span> How will you work on a problem? </span>
+                                </a>
+                            </h3>
+                        </div>
+
+                        <div id="faqItem06" class="content collapse">
+                            <div class="content--inner">
+                                <p>The problems will be broadcasted through the main channel. There will be a comment
+                                    option along with the problem where you can give your suggestions.You can pitch your
+                                    solutions and discuss with other members. The Initiation Members Group is there for
+                                    your additional support
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+                </div>
+                <!-- FAQ Items End -->
+                <!-- </div> -->
+                <!-- Download Block End -->
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

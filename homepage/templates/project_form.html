@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+
+{% block 'content' %}
+
+<!-- TODO: Create proper UI for form submission -->
+
+<section>
+    <div class="container" style="font-size: 20px;padding: 16px 0;
+      text-align:left;margin-top:10px;">
+        <form class="form-row" action="" method="POST">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="name"><b style="color:black;">Project Name</b></label>
+                <input class="form-control" style="background-color: #DCDCDC;" id="name" type="text" name="name" {% if form.name.value %}
+                    value="{{form.name.value}}" {% endif %} placeholder="Enter Project Name">
+            </div>
+
+            <div class="form-group">
+                <label for="category"><b style="color:black;">Category</b></label>
+                <select class="form-control" name="category" id="category" style="background-color: #DCDCDC	;">
+                    {% for choice in form.fields.category.choices %}
+                    <option value="{{choice.0}}" {% ifequal form.category.value choice.0 %} selected {% endifequal %}>
+                        {{choice.1}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description"><b style="color:black;">Description</b></label>
+                <textarea class="form-control" style="background-color: #DCDCDC	;" name="description" id="description" cols="30" rows="8"
+                    placeholder="Description">{% if form.description.value %}{{form.description.value}}{% endif %}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="group_link"><b style="color:black;">Group Link</b></label>
+                <input class="form-control" style="background-color: #DCDCDC	;" type="url" name="group_link" id="group_link" {% if form.group_link.value %}
+                    value="{{form.group_link.value}}" {% endif %}>
+            </div>
+
+            <input class="btn btn-primary" style="border-radius: 12px;font-size: 20px;margin-bottom: 9px;font-weight: 400;" type="submit" value="Submit">
+        </form>
+    </div>
+</section>
+
+
+{% endblock %}

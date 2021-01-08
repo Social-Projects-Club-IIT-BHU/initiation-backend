@@ -1,9 +1,6 @@
 from django.contrib import admin
-from .models import *
 
-# Register your models here.
+from .models import Category, Project
+
 admin.site.register(Project)
-admin.site.register(Forum)
-admin.site.register(Member)
-admin.site.register(Chat)
 admin.site.register(Category)
