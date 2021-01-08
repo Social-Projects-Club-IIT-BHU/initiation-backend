@@ -19,12 +19,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p9l#n-0#m7y)a05@9b(%&5@p0@1e8$h38e#cz@%k%u0kft4pfo'
+#SECRET_KEY = 'p9l#n-0#m7y)a05@9b(%&5@p0@1e8$h38e#cz@%k%u0kft4pfo'
+
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'p9l#n-0#m7y)a05@9b(%&5@p0@1e8$h38e#cz@%k%u0kft4pfo')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+# DEBUG = True
+DEBUG = False
+SECURE_SSL_REDIRECT = True
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -37,9 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
 ]
-
+#'whitenoise.middleware.WhiteNoiseMiddleware',
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -118,6 +124,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+#STATIC_URL = '/static/'
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = BASE_DIR / 'staticfiles'  #. os.path.join(BASE_DIR, 'staticfiles')
+
+# The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
 
 LOGIN_URL = '/login'
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
