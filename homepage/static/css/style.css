@@ -3469,7 +3469,6 @@ body.isScrolling #backToTop {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("img/music-icon.png");
     background-position: center;
     background-repeat: no-repeat;
 }
