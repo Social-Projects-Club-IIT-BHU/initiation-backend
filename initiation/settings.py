@@ -22,13 +22,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #SECRET_KEY = 'p9l#n-0#m7y)a05@9b(%&5@p0@1e8$h38e#cz@%k%u0kft4pfo'
 
 import os
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'p9l#n-0#m7y)a05@9b(%&5@p0@1e8$h38e#cz@%k%u0kft4pfo')
 
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY', 'p9l#n-0#m7y)a05@9b(%&5@p0@1e8$h38e#cz@%k%u0kft4pfo')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = False
-SECURE_SSL_REDIRECT = True
+if os.environ.get('PRODUCTION'):
+    DEBUG = False
+    SECURE_SSL_REDIRECT = True
+else:
+    DEBUG = True
+
 ALLOWED_HOSTS = ['*']
 
 # Application definition
@@ -143,5 +148,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
+
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
