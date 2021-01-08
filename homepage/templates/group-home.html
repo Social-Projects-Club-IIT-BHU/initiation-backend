@@ -2,6 +2,7 @@
 
 {% block 'content' %}
 
+
 <!-- Cover Header Start -->
 <div class="cover--header pt--80 text-center" data-bg-img="img/cover-header-img/bg-01.jpg" data-overlay="0.6"
 data-overlay-color="white">
@@ -9,20 +10,20 @@ data-overlay-color="white">
     <div class="cover--avatar" data-overlay="0.3" data-overlay-color="primary">
         <img src="img/cover-header-img/avatar-01.jpg" alt="">
     </div>
+    {% if object %}
+        <div class="cover--user-name">
+            <h2 class="h3 fw--600">{{ object.name }}</h2>
+        </div>
 
-    <div class="cover--user-name">
-        <h2 class="h3 fw--600">Project Name</h2>
-    </div>
-
-    <div class="cover--user-activity">
-        <p><i class="fa mr--8 fa-clock-o"></i>Active 1 year 9 monts ago</p>
-    </div>
+        <div class="cover--user-activity">
+            <p><i class="fa mr--8 fa-clock-o"></i>Activity pending</p>
+        </div>
 
 
-    <div class="cover--user-desc fw--400 fs--18 fstyle--i text-darkest">
-        <p>Hello everyone ! There are many variations of passages of Lorem Ipsum available, but the majority
-            have suffered alteration in some form, by injected humour.</p>
-    </div>
+        <div class="cover--user-desc fw--400 fs--18 fstyle--i text-darkest">
+            <p>{{ object.description }}</p>
+        </div>
+    {% endif %}
 </div>
 </div>
 <!-- Cover Header End -->
@@ -47,9 +48,6 @@ data-overlay-color="white">
 
                 <!-- Filter Nav Start -->
                 <!-- <div class=" "> -->
-                    <div class="box--controls float--right pb--60">
-                        <a href="{% url 'groups' %}" class="btn btn-primary fw--500 ">Join Group</a>
-                    </div>
                 <!-- </div> -->
                 <!-- Filter Nav End -->
 

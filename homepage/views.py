@@ -59,6 +59,7 @@ def project_list_view(request):
 
 
 class ProjectDetailView(DetailView):
+    template_name = 'group-home.html'
     model = Project
 
 
